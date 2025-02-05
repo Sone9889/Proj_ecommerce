@@ -1,0 +1,115 @@
+{% extends 'app/component/base.html' %}
+{% load static %}
+{% block title %}About{% endblock title %}
+
+{% block banner_slider %}
+<style>
+    /* CSS สำหรับการแอนิเมชันเมื่อเมาส์ Hover บนรูปภาพ */
+    .img2 img {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .img2 img:hover {
+        transform: scale(0.9);
+        /* ขยายขนาดรูปภาพ 10% */
+    }
+</style>
+
+<div class="container mt-5 content_section_single">
+    <div class="col-md-8 offset-md-2">
+        <h1 class="text-center">Details</h1>
+        <div class="row flex justify-content-between">
+            <div class="img2 col-lg-5 mt-5">
+                <!-- รูปภาพที่มีแอนิเมชันเมื่อ Hover -->
+                <img src="{% static 'app/images/show/office.jpg' %}"
+                    class="image col-xs-6 col-sm-12 col-lg-12 mt-3 text-sm-center w-100 h-auto border-bottom shadow rounded"
+                    style="object-fit: contain;" alt="">
+            </div>
+
+            <div class="productdetail col-lg-7 d-flex align-items-center">
+                <div class="mt-5">
+                    <h4>Product Factures</h4>
+                    <!-- แสดงรายละเอียดของสินค้า -->
+                    <p>1. {{ product.description }}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br><br>
+    <hr>
+    <!-- book box -->
+    <div class="container mt-5 ">
+        <div class="row text-white border-bottom shadow offset-md ">
+            <div class="col-lg-4 col-md-6 ">
+                <div class="book-box text-center">
+                    <img src="{% static 'app/images/show/R.jpg' %}" class="book-image   rounded" alt="Book 1">
+                    <h5>Book Title 1</h5>
+                    <hr>
+                    <p>A brief description of the book. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn btn-custom btn-shadow"><a href="#" class="nav-link text-white">Click
+                            Me</a></button>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="book-box text-center book-box-center">
+                    <img src="{% static 'app/images/show/office.jpg' %}" class="book-image   rounded" alt="Book 2">
+                    <h5>Book Title 2</h5>
+                    <hr>
+                    <p>A brief description of the book. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn btn-custom btn-shadow"><a href="#" class="nav-link text-white">Click
+                            Me</a></button>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="book-box text-center">
+                    <img src="{% static 'app/images/show/room.jpg' %}" class="book-image   rounded" alt="Book 3">
+                    <h5>Book Title 3</h5>
+                    <hr>
+                    <p>A brief description of the book. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn btn-custom btn-shadow"><a href="#" class="nav-link text-white">Click
+                            Me</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div id="map" style="height: 100px;"></div>
+        </div>
+    </div>
+
+
+    <!--  -->
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+
+            <div class="text-center">
+                <!-- รูปภาพขนาดเล็ก -->
+                <img src="https://via.placeholder.com/150" class="rounded-circle" alt="Our Team">
+            </div>
+            <!-- ข้อความรายละเอียดเกี่ยวกับทีม -->
+            <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel
+                consectetur interdum, nisl nisi sollicitudin nisl, non luctus erat ligula et neque. Proin euismod erat
+                sit amet risus dignissim, sed bibendum metus ornare. Integer dapibus sapien nec vehicula congue.</p>
+            <p>Mauris tempor felis et libero volutpat, a hendrerit justo feugiat. Ut vitae pharetra justo. Aliquam erat
+                volutpat. Integer fermentum nisi at turpis placerat bibendum. Proin et lacus ac tortor scelerisque
+                gravida vel et nulla. Sed non urna eget elit vestibulum egestas.</p>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div id="map" style="height: 100px;"></div>
+        </div>
+    </div>
+
+    <!--  -->
+
+</div>
+{% endblock banner_slider %}

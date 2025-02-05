@@ -1,0 +1,44 @@
+{% extends 'app/component/base.html' %}
+{% load static %}
+{% block title %}ProductDetail{% endblock title %}
+
+{% block main-content %}
+<div class="container content_section_single">
+    <div class="row flex justify-content-between">
+        <div class="img2 col-lg-5 mt-5">
+            <img src="{{product.product_image.url}}"
+                 class="image col-xs-6 col-sm-12 col-lg-12 mt-3 text-sm-center w-100 h-75" 
+                 style="object-fit: contain;" alt="">
+        </div>
+        
+
+
+        <div class="productdetail col-lg-5">
+            <h1 style="font-family: georgia; font-size: 50px;">{{product.title}}</h1>
+            <h5>Rs. {{product.discounted_price}}/-</h5>
+            <small class="text-decoration-line-throung tex-muted fs-5">
+                <del>Rs. {{product.selling_price}}/-</del>
+                <br><br>
+                <h4>Product Factures</h4>
+                <li>{{product.description}}</li>
+                <br>
+                <li>{{product.conposition}}</li>
+                <br>
+                <li>{{product.prodapp}}</li>
+                <br>
+                <div class="buttons row flex" style="font-family: Rajdhani;">
+                    <button type="submit"
+                        class="d-grid gap-2 btn1 btn btn-danger p-1 m-1 btn-lg text-decoration-none text-white">Add to
+                        cart
+                    </button>
+                    <div class="btn btn-dark p-1 m-1 btn-lg">
+                        <a href="#" class="text-decoration-none text-white">
+                            Buy Now
+                        </a>
+                    </div>
+                </div>
+            </small>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}
